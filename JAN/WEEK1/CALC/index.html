@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALC</title>
+</head>
+<body>
+
+    <div>
+
+        <h1>60s</h1>
+
+        <h1 class="problem">1 + 1</h1>
+    
+        <h1>SCORE 0</h1>
+    
+        <input type="text" id="result" placeholder="enter answer">
+        <button onclick="getValue()">get value</button>
+
+    </div>
+
+    <script>
+
+        //get value from problem
+        var problem = document.querySelector(".problem").textContent;
+        var nr1 = parseInt( problem[0] ), nr2 = parseInt( problem[4] );
+        var sum = nr1 + nr2;
+        alert("problem: " + sum);    
+
+        function getValue(){
+            
+            // get input from result
+            let inputField = document.getElementById("result");
+            let value = inputField.value;
+            
+            //check input
+            if( value==3) alert("CORRECT: " + value);
+            else alert("WRONG: " + value);
+        }
+    </script>
+
+</body>
+</html>
